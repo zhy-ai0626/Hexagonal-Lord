@@ -1,0 +1,32 @@
+{
+  "_说明": "宝物表。slot 装备位：weapon 武器 / shield 盾 / helmet 头盔 / armor 铠甲 / ring 戒指 / boots 靴子 / necklace 项链 / misc 杂项。grade 1-4 = 普通/稀有/史诗/传说，决定地图上会被多强的野怪看守。bonus 的键：attack/defense/power/knowledge 四维，morale 士气，luck 运气，move 移动力，mana_regen 每日法力恢复，spell_dmg 法术伤害倍率，gold 每日金币。",
+  "artifacts": [
+    {"id": "iron_sabre", "name": "铁制弯刀", "slot": "weapon", "grade": 1, "bonus": {"attack": 2}, "desc": "攻击 +2"},
+    {"id": "oak_shield", "name": "橡木圆盾", "slot": "shield", "grade": 1, "bonus": {"defense": 2}, "desc": "防御 +2"},
+    {"id": "apprentice_cap", "name": "学徒帽", "slot": "helmet", "grade": 1, "bonus": {"knowledge": 2}, "desc": "知识 +2"},
+    {"id": "ember_ring", "name": "余烬戒指", "slot": "ring", "grade": 1, "bonus": {"power": 2}, "desc": "魔力 +2"},
+    {"id": "wanderer_boots", "name": "旅人之靴", "slot": "boots", "grade": 1, "bonus": {"move": 300}, "desc": "移动力 +300"},
+    {"id": "lucky_coin", "name": "幸运币", "slot": "misc", "grade": 1, "bonus": {"luck": 1}, "desc": "运气 +1"},
+    {"id": "war_horn", "name": "战号", "slot": "misc", "grade": 1, "bonus": {"morale": 1}, "desc": "士气 +1"},
+
+    {"id": "stormcaller_blade", "name": "唤雷之刃", "slot": "weapon", "grade": 2, "bonus": {"attack": 4}, "desc": "攻击 +4"},
+    {"id": "bulwark_plate", "name": "壁垒胸甲", "slot": "armor", "grade": 2, "bonus": {"defense": 4}, "desc": "防御 +4"},
+    {"id": "sage_circlet", "name": "贤者头环", "slot": "helmet", "grade": 2, "bonus": {"knowledge": 3, "power": 1}, "desc": "知识 +3，魔力 +1"},
+    {"id": "starlight_pendant", "name": "星光吊坠", "slot": "necklace", "grade": 2, "bonus": {"mana_regen": 3}, "desc": "每天额外恢复 3 点法力"},
+    {"id": "windstride_boots", "name": "追风靴", "slot": "boots", "grade": 2, "bonus": {"move": 600}, "desc": "移动力 +600"},
+    {"id": "merchant_seal", "name": "商会印章", "slot": "misc", "grade": 2, "bonus": {"gold": 500}, "desc": "每天 +500 金币"},
+
+    {"id": "dragonbone_lance", "name": "龙骨长枪", "slot": "weapon", "grade": 3, "bonus": {"attack": 6, "defense": 1}, "desc": "攻击 +6，防御 +1"},
+    {"id": "aegis_of_dawn", "name": "曙光圣盾", "slot": "shield", "grade": 3, "bonus": {"defense": 5, "morale": 1}, "desc": "防御 +5，士气 +1"},
+    {"id": "archmage_robe", "name": "大法师长袍", "slot": "armor", "grade": 3, "bonus": {"power": 4, "knowledge": 2}, "desc": "魔力 +4，知识 +2"},
+    {"id": "amulet_of_focus", "name": "凝神护符", "slot": "necklace", "grade": 3, "bonus": {"spell_dmg": 0.25}, "desc": "法术伤害 +25%"},
+    {"id": "ring_of_fortune", "name": "命运之戒", "slot": "ring", "grade": 3, "bonus": {"luck": 2, "morale": 1}, "desc": "运气 +2，士气 +1"},
+
+    {"id": "crown_of_hexlords", "name": "六角王冠", "slot": "helmet", "grade": 4, "bonus": {"attack": 3, "defense": 3, "power": 3, "knowledge": 3}, "desc": "四维全 +3"},
+    {"id": "worldroot_staff", "name": "世界树之杖", "slot": "weapon", "grade": 4, "bonus": {"power": 8, "mana_regen": 5}, "desc": "魔力 +8，每天额外恢复 5 点法力"},
+    {"id": "titan_bulwark", "name": "泰坦壁垒", "slot": "armor", "grade": 4, "bonus": {"defense": 10}, "desc": "防御 +10"},
+    {"id": "sevenleague_boots", "name": "七里靴", "slot": "boots", "grade": 4, "bonus": {"move": 1000}, "desc": "移动力 +1000"}
+  ],
+  "slots": ["weapon", "shield", "helmet", "armor", "necklace", "ring", "boots", "misc"],
+  "slot_names": {"weapon": "武器", "shield": "盾牌", "helmet": "头盔", "armor": "铠甲", "necklace": "项链", "ring": "戒指", "boots": "靴子", "misc": "杂项"}
+}

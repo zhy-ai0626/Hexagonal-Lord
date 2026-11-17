@@ -1,0 +1,11 @@
+# Python 缓存
+__pycache__/
+*.pyc
+
+# 存档（运行时自动创建）
+saves/
+
+# 测试生成的截图（跑 ui_smoke.py / play_sim.py 会重新生成）
+tests/shots/
+
+.DS_Store

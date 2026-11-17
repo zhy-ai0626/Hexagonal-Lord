@@ -1,0 +1,29 @@
+{
+  "_说明": "城镇建筑表（所有种族共用结构，兵营名字按种族显示）。requires 是前置建筑；replaces 表示升级自哪座建筑（建成后旧建筑视为已拥有）。每天每城只能建一座。dwell1-7 对应 7 级兵营，upgrades 字段暂未使用。",
+  "buildings": [
+    {"id": "village_hall", "name": "村公所", "cost": {}, "requires": [], "income": 500, "desc": "每天 +500 金币（初始就有）"},
+    {"id": "town_hall", "name": "镇公所", "cost": {"gold": 2500}, "requires": ["village_hall"], "replaces": "village_hall", "income": 1000, "desc": "每天 +1000 金币"},
+    {"id": "city_hall", "name": "市政厅", "cost": {"gold": 5000, "wood": 5, "ore": 5}, "requires": ["town_hall", "mage_guild_1", "market"], "replaces": "town_hall", "income": 2000, "desc": "每天 +2000 金币"},
+    {"id": "capitol", "name": "王城", "cost": {"gold": 10000, "wood": 10, "ore": 10}, "requires": ["city_hall", "castle"], "replaces": "city_hall", "income": 4000, "desc": "每天 +4000 金币（每位玩家只能有一座）"},
+
+    {"id": "fort", "name": "要塞", "cost": {"gold": 4000, "wood": 15, "ore": 15}, "requires": [], "fort_level": 1, "desc": "守城时己方防御 +2；解锁 3 级以上兵营"},
+    {"id": "citadel", "name": "城堡", "cost": {"gold": 3000, "ore": 5}, "requires": ["fort"], "replaces": "fort", "fort_level": 2, "desc": "兵种产量 +50%，守城时己方防御 +4"},
+    {"id": "castle", "name": "王堡", "cost": {"gold": 5000, "wood": 10, "ore": 10}, "requires": ["citadel"], "replaces": "citadel", "fort_level": 3, "desc": "兵种产量 +100%，守城时己方防御 +6"},
+
+    {"id": "tavern", "name": "酒馆", "cost": {"gold": 500, "wood": 5}, "requires": [], "desc": "可雇佣新英雄；守城时士气 +1"},
+    {"id": "market", "name": "市场", "cost": {"gold": 500, "wood": 5}, "requires": [], "desc": "资源交易；拥有的市场越多汇率越好"},
+    {"id": "mage_guild_1", "name": "法师塔 1 级", "cost": {"gold": 2000, "wood": 5, "ore": 5}, "requires": [], "guild_level": 1, "desc": "提供 1 级法术，英雄进城可学习并恢复法力"},
+    {"id": "mage_guild_2", "name": "法师塔 2 级", "cost": {"gold": 1000, "wood": 5, "ore": 5, "crystal": 2, "stardust": 2, "mithril": 2}, "requires": ["mage_guild_1"], "replaces": "mage_guild_1", "guild_level": 2, "desc": "提供 2 级法术"},
+    {"id": "mage_guild_3", "name": "法师塔 3 级", "cost": {"gold": 1000, "wood": 5, "ore": 5, "crystal": 3, "stardust": 3, "mithril": 3}, "requires": ["mage_guild_2"], "replaces": "mage_guild_2", "guild_level": 3, "desc": "提供 3 级法术"},
+    {"id": "mage_guild_4", "name": "法师塔 4 级", "cost": {"gold": 1000, "wood": 5, "ore": 5, "crystal": 4, "stardust": 4, "mithril": 4}, "requires": ["mage_guild_3"], "replaces": "mage_guild_3", "guild_level": 4, "desc": "提供 4 级法术"},
+
+    {"id": "dwell1", "name": "1 级兵营", "cost": {"gold": 400, "wood": 5}, "requires": [], "tier": 1, "desc": "招募 1 级兵种"},
+    {"id": "dwell2", "name": "2 级兵营", "cost": {"gold": 800, "wood": 5, "ore": 5}, "requires": ["dwell1"], "tier": 2, "desc": "招募 2 级兵种"},
+    {"id": "dwell3", "name": "3 级兵营", "cost": {"gold": 1200, "wood": 5, "ore": 10}, "requires": ["dwell2", "fort"], "tier": 3, "desc": "招募 3 级兵种"},
+    {"id": "dwell4", "name": "4 级兵营", "cost": {"gold": 2000, "wood": 10, "ore": 10}, "requires": ["dwell3"], "tier": 4, "desc": "招募 4 级兵种"},
+    {"id": "dwell5", "name": "5 级兵营", "cost": {"gold": 3000, "wood": 10, "ore": 10, "rare": 5}, "requires": ["dwell4", "mage_guild_1"], "tier": 5, "desc": "招募 5 级兵种"},
+    {"id": "dwell6", "name": "6 级兵营", "cost": {"gold": 5000, "wood": 15, "ore": 15, "rare": 10}, "requires": ["dwell5", "citadel"], "tier": 6, "desc": "招募 6 级兵种"},
+    {"id": "dwell7", "name": "7 级兵营", "cost": {"gold": 10000, "wood": 20, "ore": 20, "rare": 20}, "requires": ["dwell6", "mage_guild_2", "castle"], "tier": 7, "desc": "招募 7 级兵种"}
+  ],
+  "_rare": "cost 里的 rare 表示该种族的稀有资源（曙光=星砂，苔影=魔晶，灰烬=秘银）。"
+}

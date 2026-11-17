@@ -1,0 +1,18 @@
+{
+  "_说明": "副技能表。每个技能 3 级（初级/中级/高级），values 是三级对应的数值，含义见 desc。",
+  "skills": [
+    {"id": "offense", "name": "攻击术", "values": [0.10, 0.20, 0.30], "desc": "近战伤害 +{pct}"},
+    {"id": "armorer", "name": "防御术", "values": [0.05, 0.10, 0.15], "desc": "受到的伤害 -{pct}"},
+    {"id": "archery", "name": "箭术", "values": [0.10, 0.25, 0.50], "desc": "远程伤害 +{pct}"},
+    {"id": "logistics", "name": "后勤学", "values": [0.10, 0.20, 0.30], "desc": "地图移动力 +{pct}"},
+    {"id": "pathfinding", "name": "寻路术", "values": [25, 50, 75], "desc": "恶劣地形额外消耗减少 {val}"},
+    {"id": "wisdom", "name": "智慧", "values": [3, 4, 4], "desc": "可学习 {val} 级法术"},
+    {"id": "sorcery", "name": "魔法效力", "values": [0.05, 0.10, 0.15], "desc": "法术伤害 +{pct}"},
+    {"id": "mysticism", "name": "冥想", "values": [2, 3, 4], "desc": "每天额外恢复 {val} 点法力"},
+    {"id": "leadership", "name": "领导力", "values": [1, 2, 3], "desc": "士气 +{val}"},
+    {"id": "luck", "name": "幸运", "values": [1, 2, 3], "desc": "运气 +{val}"},
+    {"id": "estates", "name": "财政", "values": [125, 250, 500], "desc": "每天 +{val} 金币"},
+    {"id": "scouting", "name": "侦察", "values": [1, 2, 3], "desc": "视野半径 +{val}"}
+  ],
+  "level_names": ["初级", "中级", "高级"]
+}

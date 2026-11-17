@@ -1,0 +1,24 @@
+{
+  "_说明": "法术表。level 1-4 对应法师塔等级；cost 法力消耗；kind：damage 伤害 / buff 增益 / debuff 减益 / heal 治疗 / resurrect 复活；target：enemy 单个敌人 / ally 单个友军 / all_enemies / all_allies / area 以目标六角格为中心半径 1；base + per_power*魔力 = 伤害或治疗量；effect 是加到兵种属性上的修正；duration 持续回合数（'power' 表示等于英雄魔力值）。",
+  "spells": [
+    {"id": "arcane_bolt", "name": "奥术箭", "level": 1, "school": "arcane", "cost": 5, "kind": "damage", "target": "enemy", "base": 10, "per_power": 10, "desc": "对单个敌方部队造成 10 + 10×魔力 点伤害。"},
+    {"id": "haste", "name": "加速", "level": 1, "school": "nature", "cost": 5, "kind": "buff", "target": "ally", "effect": {"speed": 3}, "duration": "power", "desc": "友军速度 +3。"},
+    {"id": "slow", "name": "减速", "level": 1, "school": "nature", "cost": 5, "kind": "debuff", "target": "enemy", "effect": {"speed": -3}, "duration": "power", "desc": "敌军速度 -3（最低 1）。"},
+    {"id": "stoneskin", "name": "石肤", "level": 1, "school": "nature", "cost": 5, "kind": "buff", "target": "ally", "effect": {"defense": 3}, "duration": "power", "desc": "友军防御 +3。"},
+    {"id": "curse", "name": "诅咒", "level": 1, "school": "fire", "cost": 5, "kind": "debuff", "target": "enemy", "effect": {"min_damage": true}, "duration": "power", "desc": "敌军攻击永远只打出最低伤害。"},
+
+    {"id": "bless", "name": "祝福", "level": 2, "school": "light", "cost": 8, "kind": "buff", "target": "ally", "effect": {"max_damage": true}, "duration": "power", "desc": "友军攻击永远打出最高伤害。"},
+    {"id": "heal", "name": "治愈", "level": 2, "school": "light", "cost": 8, "kind": "heal", "target": "ally", "base": 20, "per_power": 6, "desc": "恢复友军 20 + 6×魔力 点生命（只恢复最上面一个生物，不复活）。"},
+    {"id": "fireball", "name": "火球", "level": 2, "school": "fire", "cost": 10, "kind": "damage", "target": "area", "base": 15, "per_power": 10, "desc": "对目标格及周围 6 格内所有部队（含友军）造成 15 + 10×魔力 点伤害。"},
+    {"id": "weakness", "name": "虚弱", "level": 2, "school": "arcane", "cost": 8, "kind": "debuff", "target": "enemy", "effect": {"attack": -3}, "duration": "power", "desc": "敌军攻击 -3。"},
+    {"id": "blind", "name": "致盲", "level": 2, "school": "light", "cost": 10, "kind": "debuff", "target": "enemy", "effect": {"blind": true}, "duration": "power", "desc": "敌军无法行动，直到被攻击或持续时间结束；被打醒时只能以一半力量反击。"},
+
+    {"id": "lightning", "name": "闪电", "level": 3, "school": "arcane", "cost": 12, "kind": "damage", "target": "enemy", "base": 25, "per_power": 25, "desc": "对单个敌方部队造成 25 + 25×魔力 点伤害。"},
+    {"id": "mass_haste", "name": "群体加速", "level": 3, "school": "nature", "cost": 14, "kind": "buff", "target": "all_allies", "effect": {"speed": 3}, "duration": "power", "desc": "所有友军速度 +3。"},
+    {"id": "mass_slow", "name": "群体减速", "level": 3, "school": "nature", "cost": 14, "kind": "debuff", "target": "all_enemies", "effect": {"speed": -3}, "duration": "power", "desc": "所有敌军速度 -3。"},
+
+    {"id": "meteor", "name": "陨星", "level": 4, "school": "fire", "cost": 18, "kind": "damage", "target": "area", "base": 50, "per_power": 25, "desc": "对目标格及周围 6 格内所有部队造成 50 + 25×魔力 点伤害。"},
+    {"id": "resurrect", "name": "复活", "level": 4, "school": "light", "cost": 20, "kind": "resurrect", "target": "ally", "base": 40, "per_power": 40, "desc": "复活友军部队中已阵亡的生物，总生命 40 + 40×魔力。"},
+    {"id": "mass_bless", "name": "群体祝福", "level": 4, "school": "light", "cost": 18, "kind": "buff", "target": "all_allies", "effect": {"max_damage": true}, "duration": "power", "desc": "所有友军永远打出最高伤害。"}
+  ]
+}
